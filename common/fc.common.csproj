@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B864C5DB-251B-4B24-9584-7E65153F1177}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fc.common</RootNamespace>
+    <AssemblyName>fc.common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\web\Bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\_EL6\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\_EL6\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\_EL6\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmn\domain\CommonAttr.cs" />
+    <Compile Include="cmn\domain\Configuration.cs" />
+    <Compile Include="cmn\cache\ConfigurationCache.cs" />
+    <Compile Include="cmn\dao\ConfigurationDao.cs" />
+    <Compile Include="cmn\facade\FCcmnFacade.cs" />
+    <Compile Include="cmn\service\ConfigurationService.cs" />
+    <Compile Include="fcdb\dao\SurveyCatalogDao.cs" />
+    <Compile Include="fcdb\dao\UserDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyBirthYearDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyJobTypeDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyLifeSpanDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyRetirementAgeDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilySexTypeDao.cs" />
+    <Compile Include="fcdb\dao\UserFamilyTypeDao.cs" />
+    <Compile Include="fcdb\dao\UserFinanceDao.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyJobTypeListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyLifeSpanListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyRetirementAgeListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilySexTypeListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFinanceListVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserPensionListVo.cs" />
+    <Compile Include="fcdb\domain\SurveyCatalog.cs" />
+    <Compile Include="fcdb\domain\SurveyCatalogAnswer.cs" />
+    <Compile Include="fcdb\domain\SurveyCatalogGroup.cs" />
+    <Compile Include="fcdb\domain\SurveyCatalogQuestion.cs" />
+    <Compile Include="fcdb\domain\User.cs" />
+    <Compile Include="fcdb\domain\UserFamily.cs" />
+    <Compile Include="fcdb\domain\UserFamilyBirthYear.cs" />
+    <Compile Include="fcdb\domain\UserFamilyJobType.cs" />
+    <Compile Include="fcdb\domain\UserFamilyLifeSpan.cs" />
+    <Compile Include="fcdb\domain\UserFamilyRetirementAge.cs" />
+    <Compile Include="fcdb\domain\UserFamilySexType.cs" />
+    <Compile Include="fcdb\domain\UserFamilyType.cs" />
+    <Compile Include="fcdb\domain\UserFinance.cs" />
+    <Compile Include="fcdb\domain\UserFinanceCatalog.cs" />
+    <Compile Include="fcdb\domain\UserGrade.cs" />
+    <Compile Include="cmn\domain\vo\ConfigurationVo.cs" />
+    <Compile Include="fcdb\domain\UserPension.cs" />
+    <Compile Include="fcdb\domain\vo\SurveyCatalogListVo.cs" />
+    <Compile Include="fcdb\domain\vo\SurveyCatalogVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyBirthYearListVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyBirthYearVo.cs" />
+    <Compile Include="fcdb\domain\listVo\UserFamilyTypeListVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyJobTypeVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyLifeSpanVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyRetirementAgeVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilySexTypeVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyTypeVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFamilyVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserFinanceVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserPensionVo.cs" />
+    <Compile Include="fcdb\domain\vo\UserVo.cs" />
+    <Compile Include="fcdb\facade\FCdbFacade.cs" />
+    <Compile Include="fcdb\service\SurveyCatalogService.cs" />
+    <Compile Include="fcdb\service\UserFamilyBirthYearService.cs" />
+    <Compile Include="fcdb\service\UserFamilyJobTypeService.cs" />
+    <Compile Include="fcdb\service\UserFamilyLifeSpanService.cs" />
+    <Compile Include="fcdb\service\UserFamilyRetirementAgeService.cs" />
+    <Compile Include="fcdb\service\UserFamilyService.cs" />
+    <Compile Include="fcdb\service\UserFamilySexTypeService.cs" />
+    <Compile Include="fcdb\service\UserFamilyTypeService.cs" />
+    <Compile Include="fcdb\service\UserFinanceService.cs" />
+    <Compile Include="fcdb\service\UserPensionService.cs" />
+    <Compile Include="fcdb\service\UserService.cs" />
+    <Compile Include="SqlCommon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fcdb\cache\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
