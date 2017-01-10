@@ -20,7 +20,7 @@
     <script type="text/javascript">
 
         var home    = '<%= base.home %>';
-        var userId  = '<%= base.userVo.user.userId %>';
+        var userId  = '<%= base.userVo.user.userId %>';    
 
         $(document).ready(function () {
 
